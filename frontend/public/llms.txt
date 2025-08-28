@@ -1,0 +1,7 @@
+## Pages
+- [Administration - GreenCart](/admin): Interface d
+- [Connexion - GreenCart](/login): Connectez-vous à votre compte GreenCart pour accéder à vos paniers et votre programme de fidélité.
+- [Email envoyé - GreenCart](/forgotpassword): Vérifiez votre boîte mail pour réinitialiser votre mot de passe GreenCart.
+- [GreenCart - Circuit Court & Anti-Gaspillage](/home): Favoriser le circuit court et lutter contre le gaspillage alimentaire. Découvrez nos paniers locaux et solidaires.
+- [Inscription - GreenCart](/register): Rejoignez la communauté GreenCart et participez au circuit court et à la lutte contre le gaspillage alimentaire.
+- [Mon Panier - GreenCart](/cart): Gérez votre panier et préparez vos achats sur GreenCart.
