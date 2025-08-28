@@ -1,0 +1,236 @@
+import { ProductsService } from './products.service';
+declare class CreateProductDto {
+    name: string;
+    description: string;
+    price: number;
+    originalPrice: number;
+    stock: number;
+    imageUrl?: string;
+    categoryId?: string;
+    type: string;
+    region: string;
+    producer: string;
+    rating?: number;
+    reviews?: number;
+    solidaire?: boolean;
+    distance: string;
+    isRestaurant?: boolean;
+    expiryNote?: string;
+    contents?: Array<{
+        item: string;
+        emoji: string;
+        order: number;
+    }>;
+}
+export declare class ProductsController {
+    private readonly productsService;
+    constructor(productsService: ProductsService);
+    listAll(type?: string, region?: string, solidaire?: string, search?: string): Promise<({
+        category: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            name: string;
+            slug: string;
+        } | null;
+        owner: {
+            id: string;
+            email: string;
+            passwordHash: string;
+            fullName: string;
+            role: import(".prisma/client").$Enums.UserRole;
+            accountStatus: import(".prisma/client").$Enums.AccountStatus;
+            createdAt: Date;
+            updatedAt: Date;
+            resetToken: string | null;
+            resetTokenExpiry: Date | null;
+            bic: string | null;
+            iban: string | null;
+            siret: string | null;
+            isStudent: boolean;
+            producerCertified: boolean;
+            studentProof: string | null;
+        };
+        contents: {
+            id: string;
+            productId: string;
+            item: string;
+            emoji: string;
+            order: number;
+        }[];
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        description: string;
+        price: import("@prisma/client/runtime/library").Decimal;
+        originalPrice: import("@prisma/client/runtime/library").Decimal;
+        currency: string;
+        stock: number;
+        imageUrl: string | null;
+        type: string;
+        region: string;
+        producer: string;
+        rating: import("@prisma/client/runtime/library").Decimal;
+        reviews: number;
+        solidaire: boolean;
+        distance: string;
+        isRestaurant: boolean;
+        expiryNote: string | null;
+        isActive: boolean;
+        featured: boolean;
+        ownerId: string;
+        categoryId: string | null;
+    })[]>;
+    create(req: any, dto: CreateProductDto): Promise<{
+        contents: {
+            id: string;
+            productId: string;
+            item: string;
+            emoji: string;
+            order: number;
+        }[];
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        description: string;
+        price: import("@prisma/client/runtime/library").Decimal;
+        originalPrice: import("@prisma/client/runtime/library").Decimal;
+        currency: string;
+        stock: number;
+        imageUrl: string | null;
+        type: string;
+        region: string;
+        producer: string;
+        rating: import("@prisma/client/runtime/library").Decimal;
+        reviews: number;
+        solidaire: boolean;
+        distance: string;
+        isRestaurant: boolean;
+        expiryNote: string | null;
+        isActive: boolean;
+        featured: boolean;
+        ownerId: string;
+        categoryId: string | null;
+    }>;
+    getOne(id: string): Promise<({
+        category: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            name: string;
+            slug: string;
+        } | null;
+        owner: {
+            id: string;
+            email: string;
+            passwordHash: string;
+            fullName: string;
+            role: import(".prisma/client").$Enums.UserRole;
+            accountStatus: import(".prisma/client").$Enums.AccountStatus;
+            createdAt: Date;
+            updatedAt: Date;
+            resetToken: string | null;
+            resetTokenExpiry: Date | null;
+            bic: string | null;
+            iban: string | null;
+            siret: string | null;
+            isStudent: boolean;
+            producerCertified: boolean;
+            studentProof: string | null;
+        };
+        contents: {
+            id: string;
+            productId: string;
+            item: string;
+            emoji: string;
+            order: number;
+        }[];
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        description: string;
+        price: import("@prisma/client/runtime/library").Decimal;
+        originalPrice: import("@prisma/client/runtime/library").Decimal;
+        currency: string;
+        stock: number;
+        imageUrl: string | null;
+        type: string;
+        region: string;
+        producer: string;
+        rating: import("@prisma/client/runtime/library").Decimal;
+        reviews: number;
+        solidaire: boolean;
+        distance: string;
+        isRestaurant: boolean;
+        expiryNote: string | null;
+        isActive: boolean;
+        featured: boolean;
+        ownerId: string;
+        categoryId: string | null;
+    }) | null>;
+    update(req: any, id: string, dto: Partial<CreateProductDto>): Promise<{
+        contents: {
+            id: string;
+            productId: string;
+            item: string;
+            emoji: string;
+            order: number;
+        }[];
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        description: string;
+        price: import("@prisma/client/runtime/library").Decimal;
+        originalPrice: import("@prisma/client/runtime/library").Decimal;
+        currency: string;
+        stock: number;
+        imageUrl: string | null;
+        type: string;
+        region: string;
+        producer: string;
+        rating: import("@prisma/client/runtime/library").Decimal;
+        reviews: number;
+        solidaire: boolean;
+        distance: string;
+        isRestaurant: boolean;
+        expiryNote: string | null;
+        isActive: boolean;
+        featured: boolean;
+        ownerId: string;
+        categoryId: string | null;
+    }>;
+    remove(req: any, id: string): Promise<{
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        name: string;
+        description: string;
+        price: import("@prisma/client/runtime/library").Decimal;
+        originalPrice: import("@prisma/client/runtime/library").Decimal;
+        currency: string;
+        stock: number;
+        imageUrl: string | null;
+        type: string;
+        region: string;
+        producer: string;
+        rating: import("@prisma/client/runtime/library").Decimal;
+        reviews: number;
+        solidaire: boolean;
+        distance: string;
+        isRestaurant: boolean;
+        expiryNote: string | null;
+        isActive: boolean;
+        featured: boolean;
+        ownerId: string;
+        categoryId: string | null;
+    }>;
+}
+export {};

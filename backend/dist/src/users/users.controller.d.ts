@@ -1,0 +1,98 @@
+import { UsersService } from './users.service';
+export declare class UsersController {
+    private readonly usersService;
+    constructor(usersService: UsersService);
+    getMe(req: any): Promise<{
+        id: string;
+        email: string;
+        passwordHash: string;
+        fullName: string;
+        role: import(".prisma/client").$Enums.UserRole;
+        accountStatus: import(".prisma/client").$Enums.AccountStatus;
+        createdAt: Date;
+        updatedAt: Date;
+        resetToken: string | null;
+        resetTokenExpiry: Date | null;
+        bic: string | null;
+        iban: string | null;
+        siret: string | null;
+        isStudent: boolean;
+        producerCertified: boolean;
+        studentProof: string | null;
+    }>;
+    getById(id: string): Promise<{
+        id: string;
+        email: string;
+        passwordHash: string;
+        fullName: string;
+        role: import(".prisma/client").$Enums.UserRole;
+        accountStatus: import(".prisma/client").$Enums.AccountStatus;
+        createdAt: Date;
+        updatedAt: Date;
+        resetToken: string | null;
+        resetTokenExpiry: Date | null;
+        bic: string | null;
+        iban: string | null;
+        siret: string | null;
+        isStudent: boolean;
+        producerCertified: boolean;
+        studentProof: string | null;
+    }>;
+    approve(id: string): Promise<{
+        id: string;
+        email: string;
+        passwordHash: string;
+        fullName: string;
+        role: import(".prisma/client").$Enums.UserRole;
+        accountStatus: import(".prisma/client").$Enums.AccountStatus;
+        createdAt: Date;
+        updatedAt: Date;
+        resetToken: string | null;
+        resetTokenExpiry: Date | null;
+        bic: string | null;
+        iban: string | null;
+        siret: string | null;
+        isStudent: boolean;
+        producerCertified: boolean;
+        studentProof: string | null;
+    }>;
+    update(id: string, body: {
+        fullName?: string;
+        email?: string;
+    }): Promise<{
+        id: string;
+        email: string;
+        passwordHash: string;
+        fullName: string;
+        role: import(".prisma/client").$Enums.UserRole;
+        accountStatus: import(".prisma/client").$Enums.AccountStatus;
+        createdAt: Date;
+        updatedAt: Date;
+        resetToken: string | null;
+        resetTokenExpiry: Date | null;
+        bic: string | null;
+        iban: string | null;
+        siret: string | null;
+        isStudent: boolean;
+        producerCertified: boolean;
+        studentProof: string | null;
+    }>;
+    delete(id: string): Promise<{
+        id: string;
+        email: string;
+        passwordHash: string;
+        fullName: string;
+        role: import(".prisma/client").$Enums.UserRole;
+        accountStatus: import(".prisma/client").$Enums.AccountStatus;
+        createdAt: Date;
+        updatedAt: Date;
+        resetToken: string | null;
+        resetTokenExpiry: Date | null;
+        bic: string | null;
+        iban: string | null;
+        siret: string | null;
+        isStudent: boolean;
+        producerCertified: boolean;
+        studentProof: string | null;
+    }>;
+}
